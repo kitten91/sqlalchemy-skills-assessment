@@ -72,7 +72,8 @@ def connect_to_db(app):
     app.config['SQLALCHEMY_ECHO'] = True
     db.app = app
     db.init_app(app)
-
+    db.create_all()
+    db.session.commit()
 
 if __name__ == "__main__":
     # As a convenience, if we run this module interactively, it will leave
