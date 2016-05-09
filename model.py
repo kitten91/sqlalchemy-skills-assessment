@@ -8,6 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+# -*- coding: utf-8 -*-
 
 ##############################################################################
 # Part 1: Compose ORM
@@ -40,8 +41,15 @@ class Brand(db.Model):
     models = db.relationship('Model')
 
     def __repr__(self):
-        return "<Brand id=%d brand name=%s year founded=%d headquartered in=%s discontinued=%d>" % (self.id, 
-            self.name, self.founded, self.headquarters, self.discontinued)
+        return "<Model id=%d name=%s founded=%d headquarters=%s>" % (self.id, 
+            self.name, self.founded, self.headquarters)
+        # for brands in Brand:
+        #     if discontinued == NULL:
+        #         return "<Brand id=%d brand name=%s year founded=%d headquartered in=%s>" % (self.id, 
+        #             self.name, self.founded, self.headquarters)
+        #     else:
+        #         return "<Brand id=%d brand name=%s year founded=%d headquartered in=%s> discontinued=%d" % (self.id, 
+        #             self.name, self.founded, self.headquarters, self.discontinued)
 
 # End Part 1
 ##############################################################################
