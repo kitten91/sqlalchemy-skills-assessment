@@ -33,7 +33,7 @@ VALUES ('Ford', 1903, 'Dearborn, MI', NULL),
 INSERT INTO models (year, brand_name, name) VALUES
 (1909, 'Ford', 'Model T'),
 (1926, 'Chrysler', 'Imperial'),
-(1948, 'Citroen', '2CV'),
+(1948, 'Citroën', '2CV'),
 (1950, 'Hillman', 'Minx Magnificent'),
 (1953, 'Chevrolet', 'Corvette'),
 (1954, 'Chevrolet', 'Corvette'),

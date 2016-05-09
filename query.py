@@ -22,18 +22,10 @@ init_app()
 # Part 2: Write queries
 
 # Get the brand with the **id** of 8.
-def get_brand_number_eight():
-
-	brand.query.filter_by(brand_name='Ford').all()
-
-	# print
-	# for brands in brand:
-	# 	if brands == 8:
-	# 		print brands
-	# 	else:
-	# 		None
+brand = Brand.query.get(8)
 
 # Get all models with the **name** Corvette and the **brand_name** Chevrolet.
+models = Model.query.filter(Model.name == 'Corvette', Model.brand_name == 'Chevrolet').all()
 
 # Get all models that are older than 1960.
 
